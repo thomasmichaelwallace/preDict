@@ -13,6 +13,12 @@ ECHO Gathering information...
 	REM enviornmental variables	
 	SET data_path=%APPDATA%\Microsoft\Word\STARTUP\
 	
+	IF EXIST preDict.dotm GOTO :insCopy
+
+	ECHO preDict file seems to be missing- unzipping on a local drive (i.e. C:\)
+	GOTO insFail
+
+:insCopy
 ECHO Installing latest version...
 
 	MKDIR %data_path% >NUL 2>NUL
