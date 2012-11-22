@@ -21,7 +21,7 @@ ECHO Gathering information...
 :insCopy
 ECHO Installing latest version...
 
-	MKDIR %data_path% >NUL 2>NUL
+	MKDIR "%data_path%" >NUL 2>NUL
 	COPY "preDict.dotm" "%data_path%" >NUL 2>NUL
 
 	REM report errors
